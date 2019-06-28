@@ -2,11 +2,13 @@ import Dependencies._
 import Helpers._
 import com.typesafe.tools.mima.core.{ProblemFilters, ReversedMissingMethodProblem}
 
+fork in Test := true
+
 val scala211 = "2.11.12"
 
 scalaVersion := scala211
 
-crossScalaVersions := Seq(scala211, "2.12.8")
+crossScalaVersions := Seq(scala211, "2.12.8", "2.13.0")
 
 name := "bigquery-fake-client"
 
